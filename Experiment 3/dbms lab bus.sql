@@ -1,0 +1,21 @@
+drop database if exists 19wh1a12b5;
+create schema 19wh1a12b5;
+use 19wh1a12b5;
+create table bus(busno varchar(20),source_station varchar(20),destination_station varchar(20),type varchar(20));
+insert into bus values ('TS111','hyderabad','Warangal','AC');
+insert into bus values ('TS001','hyderabad','khammam','NON-AC');
+insert into bus values ('TS202','tirupati','hyderabad','AC');
+insert into bus values ('TS159','hyderabad','karimnagar','AC');
+insert into bus values ('TS203','khammam','Warangal','AC');
+update bus b set b.type = 'NON-AC' where b.busno='TS202';
+delete from bus b where b.busno='TS203';
+select * from bus;
+create table passenger(name varchar(20),gender varchar(20),age int,fare int);
+insert into passenger values('tejaswini','F',19,1000);
+insert into passenger values('ramya','F',25,1000);
+insert into passenger values('ramesh','M',27,1000);
+insert into passenger values('aarush','M',18,1000);
+insert into passenger values('shahid','M',20,1000);
+delete from passenger p where p.name = 'shahid';
+select * from  passenger;
+
